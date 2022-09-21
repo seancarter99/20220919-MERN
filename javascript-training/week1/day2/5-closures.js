@@ -64,6 +64,14 @@ function timesX(x) {
     }
 }
 
+/**
+ * The function returned looks like this
+ * 
+ * function times5(y) {
+ *   return 5 * y;
+ * }
+ */
+
 const times5 = timesX(5);
 
 console.log(times5(3)); // 15
@@ -71,6 +79,14 @@ console.log(times5(100)); // 500
 console.log(times5(2)); // 10
 console.log(times5(9)); // 45
 
+
+/**
+ * The function returned looks like this
+ * 
+ * function times3(y) {
+ *   return 3 * y;
+ * }
+ */
 const times3 = timesX(3);
 
 //                 x   y
