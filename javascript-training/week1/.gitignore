@@ -1,0 +1,2 @@
+# Ignore node_modules so it doesn't get pushed
+node_modules
