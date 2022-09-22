@@ -1,2 +1,4 @@
+# Anything in this file will not get pushed to GitHub
+
 # Ignore node_modules so it doesn't get pushed
 node_modules

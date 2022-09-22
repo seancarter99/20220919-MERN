@@ -50,6 +50,8 @@ Dev Dependencies are omitted
 Globally installs the package so that you can use it in any project
 
 ## package.json
+A file that describes the project meta data and defines what dependencies it requires
+NPM will look at this file when running commands such `npm install` or `npm update <package-name>`
 
 ## package-lock.json
 It "locks down" the dependency tree to ensure all of the peer dependencies are the version we expect them to be

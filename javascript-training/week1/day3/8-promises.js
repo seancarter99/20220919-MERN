@@ -16,7 +16,7 @@ const promise = new Promise((resolve, reject) => {
     reject('Promise resolved!');
 });
 
-// console.log(promise);
+console.log(promise);
 
 // .then() handles the fulfilled Promise state
 // .catch() // handles the rejected Promise state
@@ -34,9 +34,19 @@ const greet = (name, msg) => {
     })   
 }
 
-greet('Brad', 'How\'re you?')
-.then(msg => console.log(msg))
+// To use await, you must be in an async function
+greet('Doug', 'How\'re you?')
+.then(taco => console.log(taco))
 .catch(err => console.error(err));
+
+const invokeGreet = async () => {
+    try {
+        const taco = await greet('Doug', 'How\'re you?');
+        console.log(taco);
+    } catch (err) {
+        console.error(err);
+    } 
+}
 
 // Chaining Promises
 
