@@ -7,6 +7,8 @@
  * Student should have a function to calculate their letter grade
  * 
  * I want the ability to sort students by grade and major and name
+ * 
+ * The ability to withdraw from a class
  */
 
 // Importing another file
@@ -27,6 +29,23 @@ describe('Student Initialization', () => {
     });
 });
 
+describe('Working with classes', () => {
+    it('Should allow for the withrdrawl of classes', () => {
+        const student = new Student({classes: ['Music', 'History', 'Math']});
+        student.withdrawFromClass('Math');
+        // not
+        expect(student.classes).not.toContain('Math');
+    });
+
+    it('Remove all duplicates when withrdrawing a class', () => {
+        // If Math was in there twice, BOTH would be removed
+        const student = new Student({classes: ['Music', 'Math', 'History', 'Math']});
+        student.withdrawFromClass('Math');
+        // not
+        expect(student.classes).not.toContain('Math');
+    });
+});
+
 describe('Sorting', () => {
 
     const students = [
@@ -37,7 +56,6 @@ describe('Sorting', () => {
 
     it('Sort an array of students by grade', () => {
         // Array Destructuring
-
         //                                                                  92 - 73 -> Positive number
         const [top, middle, last] = students.sort((student1, student2) => student2.grade - student1.grade);
         expect(top.name).toBe('Zack');
@@ -47,6 +65,7 @@ describe('Sorting', () => {
 
     it('Sort an array of students by name', () => {
         const [first, middle, last] = students.sort((student1, student2) => {
+            // Since I used {} to open up the function body, I must use return
             return student1.name < student2.name ? -1 : student1.name > student2.name ? 1 : 0;
         });
         expect(first.name).toBe('Jack');

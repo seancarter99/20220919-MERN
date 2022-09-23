@@ -21,7 +21,12 @@ class Student {
         this.#name = name;
         this.#grade = grade;
         this.#major = major;
-        this.classes = classes; // This line will trigger my check
+        this.classes = classes; // This line will trigger my check by calling my setter
+    }
+
+    withdrawFromClass(className) {
+        // Filter out all classes that match the className specified
+        this.#classes = this.#classes.filter(classs => classs !== className);
     }
 
     get name() {
@@ -52,6 +57,7 @@ class Student {
         return this.#classes;
     }
 
+    // `this.classes = someValue` will auto call this setter with the parameter being someValue
     set classes(classes) {
         if (!Array.isArray(classes)) {
             throw new Error('Classes must be defined as an array');

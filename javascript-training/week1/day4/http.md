@@ -50,4 +50,17 @@ Status codes merely indicate intent. It is a common set of standards that we sho
 
 ## Idempotent vs Safe
 
-## REST
+Idempotency is the ability to perform the same action repeatedly with the same effect occuring each time
+
+Idempotent Methods:
+- GET is idempotent because I can read the same data multiple times and it won't ever change
+- POST is not idempotent because I'm creating new data (brand new entity)
+- PUT is idempotent because I can update a resource multiple times for the same effect
+- PATCH is NOT idempotent because I could have a field that has a location on where to look for something and changing would prevent me from updating it further (in most situations, PATCH IS idemptotent though)
+- DELETE is idempotent because it's the same effect each time
+
+Safety does not involve changing data
+
+Safe Methods:
+- GET is safe because you're just reading data and that doesn't change the data
+- POST, PUT, PATCH, DELETE are all NOT safe because they mutate (change) or create data
