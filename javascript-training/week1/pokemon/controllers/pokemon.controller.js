@@ -19,4 +19,27 @@ const findPokemonById = async id => {
     }
 };
 
-module.exports = { findAllPokemon, findPokemonById };
+const createPokemon = async pokemonToSave => {
+    try {
+        // We'll use the model and create a new instance of it
+        // This alone does not save the entity
+        const pokemon = new Pokemon(pokemonToSave); // This runs all of my validation logic
+        // pokemon.name = 'Fred'; // This change would be saved
+        await pokemon.save(); // Take the instance and save it
+        return pokemon;
+    } catch (err) {
+        throw err;
+    }
+}
+
+const updatePokemon = async (id, pokemonToUpdate) => {
+    try {
+        await Pokemon.findByIdAndUpdate(id, pokemonToUpdate);
+    } catch (err) {
+        throw { status: 400, msg: err };
+    }
+};
+
+const deletePokemonById = async id => await Pokemon.findByIdAndDelete(id);
+
+module.exports = { findAllPokemon, findPokemonById, createPokemon, updatePokemon, deletePokemonById };
