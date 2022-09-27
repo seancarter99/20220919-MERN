@@ -8,6 +8,7 @@ app.use(express.json());
 // Routes
 const pokemonRouter = require('./routes/pokemon.route.js');
 app.use('/pokemon', pokemonRouter);
+app.use('/trainers', require('./routes/trainer.route.js')); // You can do it on one line
 
 const connectToMongo = async () => {
     try {
