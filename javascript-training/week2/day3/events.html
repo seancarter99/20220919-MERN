@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            margin: 10px 0px;
+            background-color: black;
+        }
+    </style>
+    <script>
+        // Everything in here is JavaScript
+        let currCount = 0;
+
+        const increment = () => {
+            // document object our way of accessing the DOM
+            // DOM stands for Document Object Model. It is a tree representation of the HTML structure
+
+            // This returns the element
+            const countSpan = document.getElementById('count');
+            currCount++;
+            countSpan.innerText = currCount;
+        }
+
+        const toggleColor = () => {
+            // We need to grab ALL boxes with a given class name
+            let boxes = document.getElementsByClassName('box');
+            for (let box of boxes) {
+                // This grabs the background-color property that the box is currently styled to
+                const currColor = box.style.backgroundColor;
+                if (currColor === 'blue') {
+                    box.style.backgroundColor = 'black';
+                } else {
+                    box.style.backgroundColor = 'blue';
+                }
+            }
+        }
+
+        const createBox = () => {
+            // To create a new element, we must use document.createElement()
+
+            const newBox = document.createElement('div');
+            // By giving a class of box, my CSS will style it AND the toggleColor function will find it
+            newBox.className = 'box';
+
+            // This element only exists in JavaScript so far
+            // I need to grab the container, and add this newBox to the end of the list
+
+            const container = document.getElementById('box-container');
+            container.appendChild(newBox);
+        }
+    </script>
+    <!-- Have this script refer to your JS file -->
+    <!-- <script src="./"></script> -->
+</head>
+<body>
+    <div><strong>Current Count:</strong> <span id="count">0</span></div>
+    <!-- To tell our button what to do, we need JavaScript -->
+    <button onclick="increment()">Increment</button>
+    <button onclick="toggleColor()">Toggle box color</button>
+    <button onclick="createBox()">Create new box</button>
+    <div id="box-container" class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>
