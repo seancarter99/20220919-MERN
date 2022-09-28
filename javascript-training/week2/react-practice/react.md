@@ -4,6 +4,9 @@
 - Component based system
 - Utilizes the Virtual DOM
 
+- React's idea is that of an unopinionated framework. They supply the primitives (rendering) and YOU (the community) supply the features/framework-esque behavior
+
+
 ## Virtual DOM
 
 - React's core philosophy is that the User Interface (UI) should be a function of the appliation's state
@@ -35,4 +38,6 @@
 
 ## Components
 
-- Allows us to organize our logic into bits of reusable code that each handle their own internal state
+- Allows us to organize our logic into bits of reusable code
+- Allows for a layer of separation in our app where each handles their own internal state
+- React will rerender your component when it's state has changed
