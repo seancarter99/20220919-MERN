@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Practice</title>
+    <style>
+        /*
+            Everything in here is CSS
+
+            This is the style tag, it is the second best to style
+
+            CSS (Cascading Style Sheets)
+
+            We use selectors to select particular HTML elements to style
+
+            3 Main Selectors:
+
+            1. Tag Selectors (Apply the styles to every type of that tag)
+
+            2. Class Selectors (Apply the styles to every element with the class name)
+
+            3. Id Selectors (Apply the styles to an element with the given id) (ids should be unique on a page)
+        */
+        div {
+            font-size: 40px;
+        }
+
+        /* Selects all red classes */
+        .red {
+            background-color: red;
+        }
+
+    </style>
+
+    <!-- To refer to an external CSS file, we must link to it -->
+    <link rel="stylesheet" href="./1-style.css">
+</head>
+<body>
+    <!-- Color will change the font color -->
+    <!-- Inline styling -->
+    <!-- It is not reusable, you just add it to one particular element. Not recommended -->
+    <div style="color: blue">Hello World!</div>
+    <div class="red" id="main-elem">Goodbye</div>
+    <span class="red">My Span</span>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* 
+    A flexbox is essentially a nicer way of styling elements in a row or column
+
+    It works by specifying an element as a container (or the flexbox)
+    Everything inside of it will be aligned based the container's specifications
+
+*/
+
+.container {
+    /* This one line makes it a flex box */
+    display: flex;
+    /* Default is row */
+    /* flex-direction: row-reverse; */
+    /* Justify-content aligning items in a row */
+    justify-content: space-between;
+
+    /* Align-items allows for vertical alignment */
+    align-items: stretch;
+
+    background-color: gray;
+    height: 500px;
+}
+
+/* Selects all divs inside a element with a class name of container */
+.container > div {
+    font-size: 30px;
+    width: 150px;
+    /* height: 150px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice with Sizing</title>
+    <style>
+        /* 
+
+            Using px to style is not super responsive 
+            
+            Absolute Units (fixed in length, do not change screen to screen):
+            - px
+            - in
+            - cm
+
+            Relative Units (variable in length, and often depend on the screen size or font size set):
+            - em (Changes size based off of the formula: 1px * current font size of element)
+            - rem (Changes size based off the font size of the root element)
+            - vw (50vw 50% of whatever the width of the screen is)
+            - vh (view height)
+            - % (Percent of the given area)
+            */
+    
+        html {
+            /* This affects the rem */
+            font-size: 50px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            html {
+                font-size: 100px;
+            }
+        }
+        .box {
+            background-color: darksalmon;
+            font-size: 1rem;
+            height: 3em;
+            width: 50vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Hello World!</div>
+</body>
+</html>

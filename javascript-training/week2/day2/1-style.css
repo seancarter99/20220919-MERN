@@ -1,0 +1,8 @@
+/* This entire file is CSS
+    The advantage of this file is that it's reusable across many pages
+*/
+
+/* Id selector. Selects the id of main-elem */
+#main-elem {
+    text-align: right;
+}

@@ -1,0 +1,16 @@
+.box {
+    /* I only want padding on the left and right */
+    /* padding: 50px; This applies to all sides */
+    padding: 0px 50px; /* 0px on the top and bottom, 50px on the left and right */
+    /* padding: 0px 50px 10px; 0px on the top, 50px on the left and right, 10px on the bottom */
+
+    /* Think of it like a compass in the order it goes
+        NESW
+    */
+    /* padding: 0px 50px 30px 20px; 0px top, 50px right, 30px bottom, 20px left */
+    border: 1px solid black;
+
+    /* margin: 50px; */
+    /* I only want a bottom margin */
+    margin-bottom: 50px;
+}
