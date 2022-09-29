@@ -1,8 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 require('dotenv').config(); // This loads the .env file contents into the Node environment
 
 const app = express();
+app.use(cors()); // This enables CORS middleware and will allow my server to take requests from other domains
 app.use(express.json());
 
 // Routes

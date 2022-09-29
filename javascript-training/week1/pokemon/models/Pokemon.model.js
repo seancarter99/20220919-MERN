@@ -25,7 +25,7 @@ const Schema = mongoose.Schema; // Schema is a class that we can create our DB s
 const pokemonSchema = new Schema({
     // Mongoose gives you a _id if you don't specify one
     // BUT you can always define your own if you have somethind else you'd want to use
-    // _id: Number,
+    // _id: Number
 
     // Inside here, I will define my document schema
     name: String, // If I don't open the object syntax, the value is the type

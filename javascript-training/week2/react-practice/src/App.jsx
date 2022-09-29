@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { ClassCounter, FunctionCounter, RefCounter } from "./components/Counter"; // If you don't specify a file, it's going to assume i mean index.js
 import { Article } from "./components/Article";
+import { SimpleList } from "./components/List/SimpleList";
+import { PokemonList } from "./components/List/PokemonList";
+import './index.css'; // Special syntax for React. This applies the CSS here and all child components
 // import ClassCounter from "./components/Counter/ClassCounter.jsx";
 // import { FunctionCounter } from "./components/Counter/FunctionCounter";
 
@@ -56,6 +59,9 @@ export const App = () => {
             >
                 F stands for Flash.
             </Article>
+
+            <SimpleList />
+            <PokemonList />
             {/* <ClassCounter /> */}
             
             {/* <FunctionCounter /> */}
