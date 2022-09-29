@@ -21,7 +21,7 @@
 import React from 'react';
 
 // For a class to be seen as a React component
-class ClassCounter extends React.Component {
+export class ClassCounter extends React.Component {
     
     #dateIntervalKey;
 
@@ -40,7 +40,7 @@ class ClassCounter extends React.Component {
         this.decrement = this.decrement.bind(this);
     }
 
-    increment(step=1) {
+    increment() {
         // setState();
         // setState comes from React and it's our way of changing state
         /**
@@ -52,7 +52,7 @@ class ClassCounter extends React.Component {
         // this.state.count++; // This is a no-no. It will not re-render the page
 
         // Update state to be a new object with count set to the old count + 1
-        this.setState({count: this.state.count + step});
+        this.setState({count: this.state.count + 1});
     }
 
     decrement() {
@@ -119,6 +119,10 @@ class ClassCounter extends React.Component {
     componentDidUpdate(prevProps, prevState) {
         console.log('Old count: ' + prevState.count);
         console.log(this.state.count);
+        if (prevState.count !== this.state.count) {
+            // Run some logic only if count changed
+            // You'd have to do this for every single piece of state that you want to evaluate
+        }
     }
 }
 

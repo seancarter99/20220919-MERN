@@ -1,0 +1,1 @@
+export const Footer = ({publishDate}) => <footer><h4>Publish Date: {publishDate}</h4></footer>

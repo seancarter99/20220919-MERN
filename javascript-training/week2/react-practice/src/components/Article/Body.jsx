@@ -1,0 +1,1 @@
+export const Body = ({children}) => <p>{children}</p>
