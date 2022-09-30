@@ -14,3 +14,49 @@
     display: flex;
     justify-content: space-between;
 }
+
+.navbar {
+    background-color: rgb(107, 9, 107);
+    color: white;
+    font-size: 20px;
+    padding: 1.5em 1em; /* 30px 20px */
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item {
+    /* Adds 10px to the left and the right */
+    margin: 0em 0.5em;
+}
+
+.nav-link {
+    /* Use whatever color the navbar is using */
+    color: inherit;
+    /* Removes the underline from the anchor tag */
+    text-decoration: none;
+
+    /* Whenever the color property changes, it will change to it over 0.25seconds */
+    transition: color 1s;
+    transition: font-size 2s;
+}
+
+/* Applies when someone hovers over a nav-link class */
+/* You could also use @keyframes for more complex animations */
+/* Pseudo class */
+.nav-link:hover {
+    color: lightgray;
+    /* font-size: 50px; */
+}
+
+
+.nav-section {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.reverse-nav-section {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}

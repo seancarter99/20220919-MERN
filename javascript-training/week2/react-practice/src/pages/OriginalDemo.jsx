@@ -3,7 +3,6 @@ import { ClassCounter, FunctionCounter, RefCounter } from "../components/Counter
 import { Article } from "../components/Article";
 import { SimpleList } from "../components/List/SimpleList";
 import { PokemonList } from "../components/List/PokemonList";
-import './index.css'; // Special syntax for React. This applies the CSS here and all child components
 // import ClassCounter from "./components/Counter/ClassCounter.jsx";
 // import { FunctionCounter } from "./components/Counter/FunctionCounter";
 
