@@ -20,9 +20,15 @@ export const AppNav = () => {
                     <Link to="/contact" className="nav-link">Contact Us</Link>
                 </NavItem>
             </NavSection>
-            <NavSection className="reverse-nav-section" style={{color: 'blue'}}>
+            <NavSection className="reverse-nav-section"> {/* </Nav>style={{color: 'blue'}}> */}
                 <NavItem>
                     <Link to="/og" className="nav-link">Original Demo</Link>
+                </NavItem>
+                <NavItem>
+                    <Link to="/context" className="nav-link">Context</Link>
+                </NavItem>
+                <NavItem>
+                    <Link to="/redux" className="nav-link">Redux</Link>
                 </NavItem>
             </NavSection>
         </Nav>

@@ -50,6 +50,7 @@ export const PokemonList = () => {
         // Axios returns a fulfilled promise if the status code is < 400
         // and a rejected promise when >= to 400 
         
+        // Move this to store. Get the res.data and use dispatch(setPokemonList(res.data))
         axios.get('http://localhost:9000/pokemon')
             .then(res => { setPokemonList(res.data); console.log(res.data) })
             .catch(err => console.error(err)); // This could easily be to render an error display

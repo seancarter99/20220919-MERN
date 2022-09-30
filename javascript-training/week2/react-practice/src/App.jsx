@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { OriginalDemo, Home, PageNotFound } from './pages';
+import { OriginalDemo, Home, PageNotFound, ContextExample, ReduxExample } from './pages';
 import './index.css'; // Special syntax for React. This applies the CSS here and all child components
 import { AppNav } from './components/Nav';
 
@@ -31,6 +31,8 @@ export const App = () => {
             <Routes>
                 {/* Each route will "route" us to another "page" */}
                 <Route path="/" element={<Home />} />
+                <Route path="/context" element={<ContextExample />} />
+                <Route path="/redux" element={<ReduxExample />} />
                 <Route path="/og" element={<OriginalDemo />} />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
