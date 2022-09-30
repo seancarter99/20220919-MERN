@@ -1,3 +1,16 @@
 .row-item {
     text-align: center;
 }
+
+.pokemon-form {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.pokemon-form > div {
+    display: flex;
+    justify-content: space-between;
+}
